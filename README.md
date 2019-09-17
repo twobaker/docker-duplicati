@@ -1,10 +1,6 @@
 [![](https://images.microbadger.com/badges/image/intersoftlab/duplicati.svg)](https://microbadger.com/images/intersoftlab/duplicati "Get your own image badge on microbadger.com")
 
 # Supported tags and respective Dockerfile links #
-  - `1.3.4` [(Dockerfile)](https://github.com/dmitryint/docker-duplicati/blob/duplicati_1.3.4/Dockerfile)
-  - `1.3.4-dev` [(Dockerfile)](https://github.com/dmitryint/docker-duplicati/blob/duplicati_1.3.4-dev/Dockerfile)
-  - `2.0` [(Dockerfile)](https://github.com/dmitryint/docker-duplicati/blob/duplicati_2.0/Dockerfile)
-
   - `canary`, `latest` [(Dockerfile)](https://github.com/dmitryint/docker-duplicati/blob/duplicati_canary/Dockerfile)
   
 # Duplicati #
@@ -24,14 +20,14 @@ Duplicati is licensed under LGPL and available for Windows and Linux (.NET 2.0+ 
 * Duplicati can make proper backups of opened or locked files using the Volume Snapshot Service (VSS) under Windows or the Logical Volume Manager (LVM) under Linux. This allows Duplicati to back up the Microsoft Outlook PST file while Outlook is running.
 
 ### Getting Help ###
-* [Oficial duplicati wiki](https://github.com/duplicati/duplicati/wiki)
+* [Official duplicati wiki](https://github.com/duplicati/duplicati/wiki)
 * Get command-line help
 ```bash
 docker run --rm -it \
     -v /root/.config/Duplicati/:/root/.config/Duplicati/ \
     -v /data:/data \
     -e MONO_EXTERNAL_ENCODINGS=UTF-8 \
-    intersoftlab/duplicati:canary help
+    twobaker/duplicati:canary help
 ```
 
 ### Start duplicati with web interface ###
@@ -43,7 +39,7 @@ docker run --rm -it \
     -e DUPLICATI_PASS=duplicatiPass \
     -e MONO_EXTERNAL_ENCODINGS=UTF-8 \
     -p 8200:8200 \
-    intersoftlab/duplicati:canary
+    twobaker/duplicati:canary
 ```
 
 Here you can see more [examples](examples).
