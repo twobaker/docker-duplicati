@@ -1,4 +1,4 @@
-FROM mono:4.6
+FROM mono:latest
 MAINTAINER Stephan G "it@flora38.ch"
 
 ARG DUPLICATI_VER=2.0.4.23_beta_2019-07-14
